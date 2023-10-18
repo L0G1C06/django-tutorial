@@ -28,3 +28,8 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     def __str__(self):
         return self.choice_text
+    
+class Product(models.Model):
+    name = models.CharField(max_length=30, null=True, blank=True)
+    price = models.CharField(max_length=40, null=True, blank=True)
+    quantity = models.IntegerField(blank=True, null=True)
